@@ -23,3 +23,13 @@ body {
     color: #fff;
     background-color: navy;
 }
+
+#cajita {
+    height: 200px;
+    width: 200px;
+}
+
+.warning {
+    background-color: rgba(139, 35, 35, 0.457);
+    border-color: 2px solid red;
+}

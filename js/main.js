@@ -131,17 +131,88 @@ const marcarCasilla = (posicion) => {
     // con el interruptor fuera, se rompe el turno
 } */
 
-let interruptor = true;
+/* 
+// versión más factorizada
 
+let interruptor = true;
 
 let casillas = document.getElementsByClassName("rectangulo");
 casillas = [...casillas]
 
-casillas.map((casilla, index) => {
+casillas.map((casilla) => {
     casilla.addEventListener("click", () => {
         if(casilla.innerHTML == ""){
             casilla.innerHTML = (interruptor) ? "X" : "O";
             interruptor = !interruptor;
         }
+        // función a parte comprobar ganador a cada tirada
     })
-});
+}); 
+*/
+
+/* CREATE DOM ELEMENTS */
+/* let texto = document.createTextNode("texto");
+let cajon = document.createElement("div");
+
+cajon.appendChild(texto);
+
+document.body.appendChild(cajon)
+ */
+
+///////////////////////
+
+/* let cajita = document.getElementById("cajita");
+
+cajita.onclick = () => {
+    cajita.classList.add("warning")
+}
+ */
+
+/////////////////////
+
+// JSON + STORAGE
+
+/* let salva = {
+    hobbie1: "luchar",
+    hobbie2: "ducha",
+    hobbie3: "futbolin"
+}
+
+let convertido = JSON.stringify(salva);
+console.log(salva)
+console.log(convertido)
+
+localStorage.setItem('salva', convertido)
+
+let sacados = JSON.parse(localStorage.getItem('salva'))
+
+console.log(sacados) */
+
+///////////////////////
+
+// sessionStorage vs localStorage
+/* 
+    sessionStorage afecta solo a la pestaña
+    localStorage todo el navegador
+
+
+*/
+
+// sessionStorage.setItem("salva",JSON.stringify(salva));
+
+/////////////////////////////
+
+/* const inputHandler = (e) => {
+    console.log(e.target.value)
+}
+ */
+
+let mensaje = document.getElementById("mensaje");
+
+
+const inputHandler = (e) => {
+    mensaje.innerHTML = e.target.value;
+}
+
+
+
